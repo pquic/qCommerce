@@ -1,0 +1,32 @@
+﻿@model Nop.Web.Models.Catalog.ProductModel.ProductVariantModel.GiftCardModel
+@if (Model.IsGiftCard)
+{
+    <div class="giftCard">
+        <div>
+            @Html.LabelFor(model => model.RecipientName)
+            @Html.TextBoxFor(model => model.RecipientName)
+        </div>
+        <div>
+            @if (Model.GiftCardType == Nop.Core.Domain.Catalog.GiftCardType.Virtual)
+            {
+                @Html.LabelFor(model => model.RecipientEmail);
+                @Html.TextBoxFor(model => model.RecipientEmail);
+            }
+        </div>
+        <div>
+            @Html.LabelFor(model => model.SenderName)
+            @Html.TextBoxFor(model => model.SenderName)
+        </div>
+        <div>
+            @if (Model.GiftCardType == Nop.Core.Domain.Catalog.GiftCardType.Virtual)
+            {
+                @Html.LabelFor(model => model.SenderEmail);
+                @Html.TextBoxFor(model => model.SenderEmail);
+            }
+        </div>
+        <div>
+            @Html.LabelFor(model => model.Message)
+            @Html.TextAreaFor(model => model.Message, new { style = "Width: 300px; Height: 100px;" })
+        </div>
+    </div>
+}
