@@ -1,0 +1,2 @@
+DataProvider: sqlserver
+DataConnectionString: Data Source=QUIC_PC\SQLEXPRESS;Initial Catalog=sources;Integrated Security=False;Persist Security Info=False;User ID=sa;Password=aux056;MultipleActiveResultSets=True
