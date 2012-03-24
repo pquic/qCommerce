@@ -8,6 +8,8 @@ namespace Nop.Admin
 {
     public static class HtmlExtensions
     {
+    	private static string forDelete = "";
+
         public static MvcHtmlString NopField<TModel>(this HtmlHelper<TModel> helper, 
             System.Linq.Expressions.Expression<Func<TModel, string>> expression)
         {
